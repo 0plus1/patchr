@@ -6,7 +6,15 @@
     "authors": [
         {
             "name": "Davide Gaido",
-            "email": "davide.0plus1@gmail.com"
+            "email": "davide.0plus1@gmail.com",
+            "homepage": "http://www.0plus1.com/",
+            "role": "Developer"
+        },
+        {
+            "name": "David Quaglieri",
+            "email": "david@websitesonq.com.au",
+            "homepage": "http://www.websitesonq.com.au/",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "stable",
