@@ -1,0 +1,21 @@
+{
+    "name": "0plus1/patchr",
+    "description": "MySQL version control",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Davide Gaido",
+            "email": "davide.0plus1@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zeroplusone\\Patchr\\": "src/"
+        }
+    }
+}
