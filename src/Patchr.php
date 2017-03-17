@@ -44,7 +44,7 @@ class Patchr extends Model
             {
                 throw new Exception('Not a number');
             }
-            CLI::writeMessageToConsole('INFO','Attempting to reserve '.$num.' patch/es');
+            $output .= 'Attempting to reserve '.$num.' patch/es';
             //Retrieve the list of files
             $output .= $this->searchDirectory($this->config['naming']['patches_dir']).PHP_EOL;
             // Assign result to variable for strict standards
@@ -77,7 +77,7 @@ class Patchr extends Model
         try
         {
             $output = '';
-            CLI::writeMessageToConsole('INFO','Attempting to add new patch');
+            $output .= 'Attempting to add new patch';
             $output .= $this->searchDirectory($this->config['naming']['patches_dir']).PHP_EOL;
             //Get latest file on disk
             $fileList = $this->getFilesList();
@@ -104,7 +104,8 @@ class Patchr extends Model
         {
             $output = '';
             $file_list = array();
-            CLI::writeMessageToConsole('INFO','Getting list of unapplied patches');
+
+            $output .= 'Getting list of unapplied patches';
             $output .= $this->searchDirectory($this->config['naming']['patches_dir']).PHP_EOL;
             
             foreach ($this->files as $file)
@@ -139,7 +140,7 @@ class Patchr extends Model
         try
         {
             $output = '';
-            CLI::writeMessageToConsole('INFO','Reading Last Applied Patch');
+            $output .= 'Reading Last Applied Patch';
             $lastApplied = $this->readLastApplied();
             if( !is_null($lastApplied['name']) )
             {
@@ -170,7 +171,7 @@ class Patchr extends Model
         $output = '';
         $file_list = array();
         $start = time();
-        CLI::writeMessageToConsole('INFO','Attempting to apply patches');
+        $output .= 'Attempting to apply patches';
         
         try
         {
@@ -178,13 +179,13 @@ class Patchr extends Model
             
             foreach ($this->files as $file)
             {
-//                CLI::writeMessageToConsole('INFO','@'.basename($file)); // Too verbose, investigate
+//                $output .= '@'.basename($file); // Too verbose, investigate
                 $result = $this->runFile($file);
                 
                 if( !empty($result) )
                 {
                     $file_list[] = $result;
-//                  CLI::writeMessageToConsole('INFO',$result); //Uncomment this for extreme logging
+//                  $output .= '$result'; //Uncomment this for extreme logging
                 }
                 
             }
