@@ -25,4 +25,3 @@ Patchr is framework agnostic, it can easily be added to any existing framework/p
 
 * Decouple Model class from Mysqli to create adapters for other RDBMS
 * Unit testing
-* Use Symfony console in place of the CLI helper
