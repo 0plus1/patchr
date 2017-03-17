@@ -44,7 +44,7 @@ class Patchr extends Model
             {
                 throw new Exception('Not a number');
             }
-            $output .= 'Attempting to reserve '.$num.' patch/es';
+            $output .= 'Attempting to reserve '.$num.' patch/es'.PHP_EOL;;
             //Retrieve the list of files
             $output .= $this->searchDirectory($this->config['naming']['patches_dir']).PHP_EOL;
             // Assign result to variable for strict standards
@@ -77,7 +77,7 @@ class Patchr extends Model
         try
         {
             $output = '';
-            $output .= 'Attempting to add new patch';
+            $output .= 'Attempting to add new patch'.PHP_EOL;
             $output .= $this->searchDirectory($this->config['naming']['patches_dir']).PHP_EOL;
             //Get latest file on disk
             $fileList = $this->getFilesList();
@@ -105,7 +105,7 @@ class Patchr extends Model
             $output = '';
             $file_list = array();
 
-            $output .= 'Getting list of unapplied patches';
+            $output .= 'Getting list of unapplied patches'.PHP_EOL;;
             $output .= $this->searchDirectory($this->config['naming']['patches_dir']).PHP_EOL;
             
             foreach ($this->files as $file)
@@ -140,7 +140,7 @@ class Patchr extends Model
         try
         {
             $output = '';
-            $output .= 'Reading Last Applied Patch';
+            $output .= 'Reading Last Applied Patch'.PHP_EOL;;
             $lastApplied = $this->readLastApplied();
             if( !is_null($lastApplied['name']) )
             {
@@ -171,7 +171,7 @@ class Patchr extends Model
         $output = '';
         $file_list = array();
         $start = time();
-        $output .= 'Attempting to apply patches';
+        $output .= 'Attempting to apply patches'.PHP_EOL;;
         
         try
         {
