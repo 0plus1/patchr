@@ -4,6 +4,7 @@ namespace Zeroplusone\Patchr;
 use Zeroplusone\Patchr\Helpers\Filesystem;
 use Zeroplusone\Patchr\Model;
 use Zeroplusone\Patchr\Helpers\CLI;
+use \Exception;
 
 /**
  * Class Patchr

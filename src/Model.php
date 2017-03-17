@@ -2,6 +2,8 @@
 
 namespace Zeroplusone\Patchr;
 
+use \Exception;
+
 /**
  * Class Model
  * @package Zeroplusone\Patchr
