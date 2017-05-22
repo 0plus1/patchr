@@ -24,7 +24,7 @@ class Filesystem
       {
           $name = '';
           $name .= $naming['prefix'];
-          $name .= str_pad( ($number+1) , $naming['digits'], "0", STR_PAD_LEFT);
+          $name .= str_pad( ((int)$number+1) , (int)$naming['digits'], "0", STR_PAD_LEFT);
           $name .= $naming['extension'];
           return $name;
       };
