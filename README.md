@@ -12,16 +12,21 @@ Patchr uses a different approach, allowing you to commit **raw** SQL, more compa
 
 Patchr is developed with deployment in mind, exposing a comprehensive command line API and it is currently used in some large scale corporate applications.
 
-### Documentation
+## Documentation
 
-SOON™
+[Patchr on Gitbook](https://0plus1.gitbooks.io/patchr/)
 
-### Frameworks
+## Tests
+
+```./vendor/bin/phpunit```
+System wide installs of phpunit might not work due to potentially different versions, please rely on above command.
+
+## Frameworks
 Patchr is framework agnostic, it can easily be added to any existing framework/project. These are the official wrappers for commonly used frameworks:
 
 * Laravel ([0plus1/patchr-laravel](https://github.com/0plus1/patchr-laravel))
 
-### Roadmap
+## Roadmap
 
 * Decouple Model class from Mysqli to create adapters for other RDBMS
-* Unit testing
+* Expand unit tests coverage
